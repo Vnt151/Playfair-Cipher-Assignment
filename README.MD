@@ -38,22 +38,3 @@ Chương trình được thiết lập sẵn ví dụ kiểm thử dựa trên d
 
 ```bash
 python playfair.py
-
-```
-
----
-
-**Sinh viên thực hiện**: [Tên của bạn]
-**Môn học**: An toàn thông tin
-
----
-
-### Cách cập nhật nhanh lên GitHub:
-
-1. Mở file **README.md** trên máy bạn, dán nội dung trên vào và nhấn **Save**.
-2. Mở **GitHub Desktop**, bạn sẽ thấy file đã thay đổi ở cột bên trái.
-3. Nhập "Update README" vào ô Summary bên dưới.
-4. Nhấn **Commit to main**.
-5. Nhấn **Push origin**.
-
-Sau khi nhấn Push, bạn lên trang GitHub của mình sẽ thấy các phần `##` đã biến thành tiêu đề rất rõ ràng. Bạn có cần mình hỗ trợ thêm gì về phần xử lý `I/J` trong code không?
