@@ -1,43 +1,59 @@
-Thuật toán Playfair Cipher (Python)
-Dự án này thực hiện cài đặt thuật toán mã hóa cổ điển Playfair Cipher bằng ngôn ngữ lập trình Python. Đây là bài tập thực hành thuộc môn An toàn thông tin, tập trung vào việc xử lý ma trận và các quy tắc thay thế cặp ký tự (digraph).
+# Playfair Cipher Assignment
 
-📌 Các quy tắc áp dụng
-Hệ thống tuân thủ các quy tắc chuẩn của mật mã học Playfair:
+## 📝 Mô tả dự án
 
-Ma trận khóa: Sử dụng ma trận kích thước 5x5.
+Dự án thực hiện cài đặt thuật toán mã hóa cổ điển **Playfair Cipher** bằng ngôn ngữ lập trình **Python**. Đây là bài tập thực hành mật mã học tập trung vào việc xử lý ma trận khóa $5 \times 5$ và các quy tắc biến đổi cặp ký tự (digraphs).
 
-Xử lý ký tự đặc biệt: Bảng chữ cái tiếng Anh gồm 25 ký tự, trong đó chữ J được gộp chung với chữ I.
+## 🛠 Quy tắc cài đặt
 
-Tiền xử lý bản rõ (Plaintext):
+* **Ma trận khóa**: Sử dụng ma trận kích thước **5x5**.
+* **Bảng chữ cái**: Sử dụng 25 ký tự (chữ `J` được gộp chung với chữ `I`).
+* **Tiền xử lý bản rõ (Plaintext)**:
+* Loại bỏ toàn bộ khoảng trắng và ký tự đặc biệt.
+* Tách thành các cặp 2 ký tự (digraphs).
+* Chèn ký tự `X` nếu hai ký tự trong một cặp trùng nhau.
+* Chèn ký tự `X` vào cuối nếu tổng số ký tự của chuỗi bị lẻ.
 
-Loại bỏ toàn bộ khoảng trắng và ký tự không phải chữ cái.
 
-Chuyển đổi toàn bộ văn bản thành chữ IN HOA.
 
-Tách văn bản thành các cặp 2 ký tự (digraphs).
+## 🚀 Ví dụ chạy thử (Test Case)
 
-Chèn ký tự giả (Padding): Chèn ký tự X nếu hai ký tự trong một cặp trùng nhau (ví dụ: EE -> EX E).
+Chương trình được thiết lập sẵn ví dụ kiểm thử dựa trên dữ liệu từ buổi học:
 
-Cân bằng: Chèn ký tự X vào cuối nếu tổng số ký tự của chuỗi bị lẻ.
+* **Thông điệp gốc**: `DO YOU LIKE TO STUDY A CRYPTOGRAPHY COURSE`
+* **Từ khóa (Key)**: `CRYPTO`
+* **Kết quả**: Chương trình sẽ thực hiện mã hóa (Encryption) và giải mã (Decryption) ngược lại để kiểm tra tính chính xác.
 
-📁 Cấu trúc thư mục
-playfair.py: File nguồn chứa toàn bộ logic thuật toán (Khởi tạo ma trận, Mã hóa, Giải mã).
+## 📂 Cấu trúc thư mục
 
-README.md: Tài liệu mô tả dự án và hướng dẫn sử dụng (file này).
+* `playfair.py`: Cài đặt thuật toán bằng Python.
+* `README.md`: Hướng dẫn sử dụng và mô tả dự án.
+* `.gitignore`: Cấu hình bỏ qua các file rác của hệ thống khi đẩy lên Git.
 
-🚀 Ví dụ kiểm thử (Test Case)
-Chương trình được thiết lập để kiểm thử dựa trên thông điệp từ ví dụ trong buổi học:
+## 💻 Cách cài đặt và chạy
 
-Thông điệp gốc: Gr bx olnh wr vwxgb d fubswrjudskb frxuvh (Sau khi giải mã Caesar là: DO YOU LIKE TO STUDY A CRYPTOGRAPHY COURSE)
+1. Đảm bảo bạn đã cài đặt **Python 3**.
+2. Mở Terminal/PowerShell tại thư mục dự án.
+3. Chạy lệnh:
 
-Từ khóa (Key): CRYPTO
+```bash
+python playfair.py
 
-Bản rõ sau tiền xử lý: DO YO UL IK ET OS TU DY AC RY PT OG RA PH YC OU RS EX
+```
 
-Kết quả đầu ra dự kiến:
+---
 
-Hiển thị ma trận 5x5 được sinh ra từ khóa CRYPTO.
+**Sinh viên thực hiện**: [Tên của bạn]
+**Môn học**: An toàn thông tin
 
-Quá trình mã hóa (Encryption) tạo ra chuỗi Ciphertext tương ứng.
+---
 
-Quá trình giải mã (Decryption) phục hồi lại văn bản gốc và kiểm tra tính chính xác (Hiển thị PASS nếu kết quả khớp).
+### Cách cập nhật nhanh lên GitHub:
+
+1. Mở file **README.md** trên máy bạn, dán nội dung trên vào và nhấn **Save**.
+2. Mở **GitHub Desktop**, bạn sẽ thấy file đã thay đổi ở cột bên trái.
+3. Nhập "Update README" vào ô Summary bên dưới.
+4. Nhấn **Commit to main**.
+5. Nhấn **Push origin**.
+
+Sau khi nhấn Push, bạn lên trang GitHub của mình sẽ thấy các phần `##` đã biến thành tiêu đề rất rõ ràng. Bạn có cần mình hỗ trợ thêm gì về phần xử lý `I/J` trong code không?
